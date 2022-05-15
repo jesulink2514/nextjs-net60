@@ -22,6 +22,8 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller}/{action=Index}/{id?}");
 
-app.MapFallbackToFile("index.html");;
+app.MapFallbackToFile("/products","/products.html");
+app.MapFallbackToFile("/products/{pId}","/products/[productId].html");
+app.MapFallbackToFile("index.html");
 
 app.Run();
